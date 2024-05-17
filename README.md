@@ -5,7 +5,7 @@ QuizWiz is an innovative GenAI-powered tool designed to generate quizzes from an
 
 * [Overview](#overview)
   * [Brief Description](#brief-description)
-  * [Why?](#why)
+  * [Why QuizMaster?](#why-quizmaster)
   * [Technologies Used](#technologies-used)
   * [Target Audience](#target-audience)
   * [Technical Architecture](#technical-architecture)
@@ -25,10 +25,11 @@ QuizWiz is an innovative GenAI-powered tool designed to generate quizzes from an
 ### Brief Description
 QuizMaster is an AI powered quiz generator that can generate and assess Quizzes from any educational document with ease. User can upload any number of pdfs and enter the topic to generate quizzes and give the assessment. 
 Say goodbye to manual quiz creation and hello to automated, efficient learning.
-![Watch the video](preview.gif)
 
-### Why?
-+ **Limitations of the Human Brain and the Abundance of Data:** Firstly, the human brain tends to forget ideas, the information it has consumed, and the understanding it has built on the assimilated infromation. Quizzes are a very effective way of both learning and retaining the information.
+![Watch the video](data/demo.gif)
+
+### Why QuizMaster?
++ **Limitations of the Human Brain:** Firstly, the human brain tends to forget ideas, the information it has consumed, and the understanding it has built on the assimilated infromation. Quizzes are a very effective way of both learning and retaining the information.
 + **The Abundance of Data:** Secondly, creating quizzes can itself be a very challenging task. Imagine you are student and you want to make a quiz out of the five research papers you read on text embeddings. Now, imagine that you a professor and you teach three courses, each course has minimum five topics, and for each topic there are atleast three documents on an average to refer. In the latter case you would definitely not say no to an automatic quiz generator like QuizMaster.
 ### Technologies used
 + Langchain, Chroma DB, GCP, VertexAI, Gemini 1.5, Streamlit, HuggingFace
@@ -41,7 +42,7 @@ Say goodbye to manual quiz creation and hello to automated, efficient learning.
 + E-Learning Platforms
 
 ### Technical Architecture
-![Technical Architecture](technical_architecture.jpg)
+![Technical Architecture](data/architecture.jpeg)
 + DocumentProcessor : Renders a streamlit UI, allows users to upload multiple PDFs and processes them into pages using Langchain's PyPDFLoader.
 + ChromaCollectionCreator : Further breaks down the pages from Document Processor into chunks using Langchain's RecursiveCharacterTextSplitter. Uses embeddings from either VertexAI or locally from HuggingFace depending on user's choice. Also has the option to persist the DB onto local machine for later use.
 + QuizGenerator : Implements RAG by extractings chunks relevant to the topic from user, formulates a prompt, passes it to LLM, generates quizzes, validates the structure, and renders the quizzes through streamlit.
@@ -85,8 +86,16 @@ Watch the video : https://www.loom.com/share/fa6cd412c1274683a0ebab5a43b09597?si
 Coming soon..
 
 ## Acknowledgments
-https://www.lettria.com/blogpost/retrieval-augmented-generation-5-uses-and-their-examples
+https://www.linkedin.com/in/mikhail-ocampo/
+
+https://python.langchain.com/v0.1/docs/get_started/introduction/
+
+https://python.langchain.com/v0.1/docs/integrations/vectorstores/chroma/
+
+https://python.langchain.com/v0.1/docs/expression_language/
+
 https://colabdoge.medium.com/what-is-rag-retrieval-augmented-generation-b0afc5dd5e79
+
 https://www.hopsworks.ai/dictionary/vector-database
 
 ## Contact

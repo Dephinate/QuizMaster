@@ -2,6 +2,7 @@ import streamlit as st
 import os
 import sys
 import json
+import time
 sys.path.append(os.path.abspath('../../'))
 from src.document_processor.documentprocessor import DocumentProcessor
 from src.embedding.embeddingclient import EmbeddingClient
@@ -133,7 +134,7 @@ class QuizGenerator:
                 print("Try ",i)
                 # Use class method to generate question
                 question_str = self.generate_question_with_vectorstore()
-                print("Qn {j} Try {i}: {question_str} \n")
+                # print("Qn {j} Try {i}: {question_str} \n")
                 ##### YOUR CODE HERE #####
                 try:
                     # Convert the JSON String to a dictionary
@@ -154,6 +155,7 @@ class QuizGenerator:
                 else:
                     print("Duplicate or invalid question detected.")
                     continue
+                time.sleep(4)
                 ##### YOUR CODE HERE #####
 
         return self.question_bank        
