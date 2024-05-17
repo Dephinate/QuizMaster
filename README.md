@@ -1,5 +1,5 @@
 # QuizMaster
-QuizWiz is an innovative GenAI-powered tool designed to generate quizzes from any educational document with ease.
+QuizMaster is an innovative GenAI-powered tool designed to generate quizzes from any educational document with ease.
 
 ## Table of Contents
 
